@@ -17,23 +17,16 @@ git clone https://github.com/yourusername/ComfyUI-poission_fusion.git
 
 
 ## Usage
-1. **Node Structure**
-```
-[Source Image] --> PoissonFusion --> [Blended Result]
-[Target Image] --/
-      [Mask] --/
-```
 
-2. **Parameters**
-| Parameter | Type | Range | Description |
-|-----------|------|-------|-------------|
-| Source Image | IMAGE | - | Foreground element to blend |
-| Target Image | IMAGE | - | Background plate |
-| Mask | IMAGE | Optional | Blending region mask (default: full white) |
-| Offset Left | INT | 0-2048 | Left offset adjustment |
-| Offset Right | INT | 0-2048 | Right offset adjustment |
-| Offset Up | INT | 0-2048 | Top offset adjustment |
-| Offset Down | INT | 0-2048 | Bottom offset adjustment |
+### Parameters
+Here, i assume that the input image is a regular polygon, so that the center point of the fusion position can be calculated using the offset.
+- **Source Image** (IMAGE): Foreground element to blend into the target image
+- **Target Image** (IMAGE): Background plate where the source image will be blended
+- **Mask** (IMAGE, Optional): Blending region mask (default: full white mask)
+- **Offset Left** (INT, 0-2048): Left offset adjustment for positioning
+- **Offset Right** (INT, 0-2048): Right offset adjustment for positioning
+- **Offset Up** (INT, 0-2048): Top offset adjustment for positioning
+- **Offset Down** (INT, 0-2048): Bottom offset adjustment for positioning
 
 ## Technical Details
 **Algorithm**: Implements OpenCV's `seamlessClone` with `NORMAL_CLONE` mode
