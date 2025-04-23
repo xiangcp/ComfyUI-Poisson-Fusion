@@ -40,7 +40,7 @@ class Poission_fusion:
                 })
             },
             "optional": {
-                "mask": ("IMAGE",),
+                "mask": ("MASK",),
             },
             # 这样可以为 FUNCTION 提供 node_id 参数
             "hidden": { "node_id": "UNIQUE_ID" }
