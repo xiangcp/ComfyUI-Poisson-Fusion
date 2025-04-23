@@ -12,8 +12,9 @@
 1. 将本仓库克隆到`ComfyUI/custom_nodes/`目录下：
 ```bash
 git clone https://github.com/yourusername/ComfyUI-poission_fusion.git
-
+```
 2. 重启ComfyUI
+
 ## 使用说明
 ### 参数说明
 假设输入图像为规则多边形，可以通过偏移量计算融合位置的中心点。
@@ -25,6 +26,7 @@ git clone https://github.com/yourusername/ComfyUI-poission_fusion.git
 - 右偏移 (INT, 0-2048): 右侧位置调整
 - 上偏移 (INT, 0-2048): 顶部位置调整
 - 下偏移 (INT, 0-2048): 底部位置调整
+
 ## 技术细节
 算法 : 使用OpenCV的 seamlessClone 函数，采用 NORMAL_CLONE 模式
 
@@ -32,9 +34,11 @@ git clone https://github.com/yourusername/ComfyUI-poission_fusion.git
 
 - 1080p处理: <500ms (RTX 3080)
 - 内存使用: <1GB每4K图像
+
 ## 兼容性
 - ComfyUI 0.3.27
 - Python 3.8-3.11
 - Windows/Linux/macOS
+
 ## 许可证
 MIT许可证 - 详见 LICENSE 文件

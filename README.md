@@ -2,6 +2,8 @@
 
 Professional image blending with Poisson seamless cloning for ComfyUI workflows
 
+[中文说明](./README_ch.md)
+
 ## Features
 - **Seamless Image Fusion** - Advanced Poisson blending algorithm for natural-looking composites
 - **Precise Mask Control** - Optional mask input for accurate blending boundaries
